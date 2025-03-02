@@ -1,15 +1,63 @@
 <!DOCTYPE html>
+<html lang="es">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Análisis Musical: DATA de Tainy</title> <!-- Titulo que aparece en la pestaña del navegador -->
-    <link rel="stylesheet" href="styles.css">
+
+    <!-- Enlace a la hoja de estilos de Bootstrap5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace a una hoja de estilos de CSS -->
 </head>
 
 <body>
+    <!-- Menú de navegación con Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">DATA - Tainy</a> <!-- Nombre de la marca en la barra de navegación -->
 
-    <header>
-        <h1>Review Musical: DATA - Tainy</h1> <!-- Titulo principal de la página -->
-        <p>
+            <!-- Contenedor de los enlaces del menú -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Inicio</a> <!-- Enlace a la sección de inicio -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#arte">Arte Visual</a> <!-- Enlace a la sección de arte visual -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#canciones">Canciones</a> <!-- Enlace a la sección de canciones -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#impacto">Impacto Cultural</a>
+                        <!-- Enlace a la sección de impacto cultural -->
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Más Contenido <!-- Menú desplegable para más contenido -->
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#usuarios">Usuarios Fans</a></li>
+
+                            <li><a class="dropdown-item" href="#contacto">Contacto</a></li> <!-- Sección de contacto -->
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Sección principal del análisis musical -->
+    <header id="home" class="container py-5 my-4 text-center">
+        <!-- Titulo principal de la página -->
+        <h1>Review Musical: DATA - Tainy</h1>
+        <!-- Descripcion introductoria del album -->
+        <p class="lead">
             "DATA" es un álbum que muestra cómo el productor ha evolucionado y profundizado en su estilo musical.
             Lanzado en 2023, el disco mezcla reguetón, trap y sonidos electrónicos de manera fresca y moderna.
             Con varias colaboraciones de artistas populares, Tainy logra crear un sonido único que reinventa los géneros
@@ -18,270 +66,525 @@
         </p>
     </header>
 
-    <!-- Seccion de navegacion con enlaces a otras partes del analisis -->
-    <section>
-        <h3>Contenido</h3> <!-- Titulo que introduce el índice de la página -->
-        <nav>
-            <ul>
-                <!-- Lista de enlaces para navegar entre las secciones -->
-                <li><a href="#arte">Arte y Estilo Visual</a></li> <!-- Enlace a la sección de Arte -->
-                <li><a href="#canciones">Análisis de Canciones</a></li> <!-- Enlace a la sección de Canciones -->
-                <li><a href="#impacto">Impacto Cultural</a></li> <!-- Enlace a la sección de Impacto Cultural -->
-            </ul>
-        </nav>
-        <hr>
+    <!-- Carrusel de imágenes con Bootstrap para mostrar elementos visuales del álbum -->
+    <div class="container mb-5">
+        <div id="albumCarousel" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Indicadores del carrusel para navegar entre imágenes -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#albumCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#albumCarousel" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#albumCarousel" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <!-- Primera imagen del carrusel: Portada del álbum -->
+                <div class="carousel-item active">
+                    <img src="https://cdn-images.dzcdn.net/images/cover/e73a2afb469cd0f06777b24b156d3f82/0x1900-000000-80-0-0.jpg"
+                        class="d-block w-100" alt="Portada del álbum DATA">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Portada del Álbum</h5> <!-- Texto descriptivo de la imagen -->
+                        <p>Arte principal del álbum DATA de Tainy</p>
+                    </div>
+                </div>
+
+                <!-- Segunda imagen del carrusel: Visualizer del álbum -->
+                <div class="carousel-item">
+                    <img src="https://images.genius.com/96f5cf9030e3bfbb792934e2fc8dd0a9.1000x1000x1.jpg"
+                        class="d-block w-100" alt="Visualizer 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Visualizer</h5>
+                        <p>Estilo visual inspirado en el anime japonés</p> <!-- Breve descripción del visualizer -->
+                    </div>
+                </div>
+
+                <!-- Tercera imagen del carrusel: Estética visual del álbum -->
+                <div class="carousel-item">
+                    <img src="https://s.yimg.com/ny/api/res/1.2/2nPd2M17vIEXARhFLkdvqQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://media.zenfs.com/en/variety.com/4e7d694b72b2f4cae825a9cd151663e4"
+                        class="d-block w-100" alt="Visualizer 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Estética Visual</h5>
+                        <p>Influencia de la cultura japonesa en el diseño</p>
+                        <!-- Explicación sobre la estética del álbum -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón para retroceder en el carrusel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#albumCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span> <!-- Icono de navegación -->
+                <span class="visually-hidden">Previous</span> <!-- Texto accesible para lectores de pantalla -->
+            </button>
+
+            <!-- Botón para avanzar en el carrusel -->
+            <button class="carousel-control-next" type="button" data-bs-target="#albumCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span> <!-- Icono de navegación -->
+                <span class="visually-hidden">Next</span> <!-- Texto accesible para lectores de pantalla -->
+            </button>
+        </div>
+    </div>
+
+
+    <!-- Seccio de arte con tarjeta de Bootstrap -->
+    <section id="arte" class="container my-5">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="mb-0">Arte y Estilo Visual</h2> <!-- Titulo de la sección -->
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    <!-- Descripcion del arte y estilo visual del álbum -->
+                    El arte del álbum DATA está profundamente influenciado por la cultura japonesa, especialmente por
+                    los animes clásicos. La portada presenta a Senna, diseñada por Hiromasa Ogura, director de anime
+                    japonés
+                    conocido por su trabajo en Ghost in the Shell (1995). Los videos y visualizers del álbum siguen esta
+                    inspiración,
+                    fusionando un estilo retro-futurista con un toque urbano.
+                </p>
+            </div>
+        </div>
     </section>
 
-    <!-- Seccion sobre el arte y estilo visual del album -->
-    <section id="arte">
-        <h2>Arte y Estilo Visual</h2> <!-- Titulo de la sección de arte -->
-        <p>
-            El arte del álbum DATA está profundamente influenciado por la cultura japonesa, especialmente por los animes
-            clásicos. La portada presenta a Senna, diseñada por Hiromasa Ogura, director de anime japonés conocido por
-            su
-            trabajo en Ghost in the Shell (1995). Los videos y visualizers del álbum siguen esta inspiración, fusionando
-            un estilo retro-futurista con un toque urbano.
-        </p>
-        <img src="https://cdn-images.dzcdn.net/images/cover/e73a2afb469cd0f06777b24b156d3f82/0x1900-000000-80-0-0.jpg" width="300" alt="Portada del álbum DATA">
-        <!-- Imagen de la portada del álbum -->
-        <p>Portada del Album</p> <!-- Descripción de la imagen -->
-        <!-- Imagen del visualizer del álbum -->
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMMKKu-H6NPkyvZZtmf8CSJvH6RZjC5oJFcw&s" width="300" alt="Visualizer 1">
-        <p>Visualizer</p> <!-- Descripción de la imagen -->
+    <!-- Seccion de canciones con tarjetas de Bootstrap -->
+    <section id="canciones" class="container my-5">
+        <h2 class="mb-4 text-center">Análisis de Canciones</h2> <!-- Título de la sección -->
+
+        <!-- Barra de progreso visual para representar la cantidad de canciones analizadas -->
+        <div class="progress mb-4" style="height: 30px;">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%;"
+                aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                Álbum completo - 20 canciones <!-- Indicador de progreso del álbum -->
+            </div>
+        </div>
+
+
+        <div class="row row-cols-1 row-cols-md-2 g-4"> <!-- Fila con columnas responsivas -->
+            <!-- Canción 1 -->
+            <div class="col"> <!-- Columna para la cancio´n -->
+                <div class="card h-100"> <!-- Tarjeta con altura completa -->
+                    <div class="card-body">
+                        <h5 class="card-title">obstáculo by Tainy & Myke Towers</h5> <!-- Titulo de la canción -->
+                        <p class="card-text">
+                            <!-- Descripción de la canción -->
+                            Es una canción intro con sonidos alternativos que refuerzan la influencia japonesa. Myke
+                            Towers relata su camino en la música, una letra que también refleja la historia de Tainy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Canción 2 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">PASIEMPRE by Tainy, Arcángel & JHAYCO (Ft. Arca, Bad Bunny, Myke Towers &
+                            Omar Courtz)</h5>
+                        <p class="card-text">
+                            Una canción de trap con una de las colaboraciones más grandes de la música actual. Todos los
+                            artistas se
+                            complementan perfectamente, y aunque la instrumental es trap, suena muy fresca. La parte
+                            final de Bad
+                            Bunny es impresionante.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canción 3 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Todavía by Tainy & Wisin & Yandel</h5>
+                        <p class="card-text">
+                            La canción que reunió a Wisin y Yandel nuevamente. Un reguetón que recuerda al estilo
+                            clásico, pero con
+                            ritmos futuristas y modernos. No decepciona el tan esperado regreso después de tantos años.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canción 4 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">FANTASMA | AVC by Tainy & JHAYCO</h5>
+                        <p class="card-text">
+                            Una de mis canciones favoritas. Tainy y Jhayco tienen una química increíble. La primera
+                            parte te lleva a
+                            un viaje futurista, perfecta para las noches, con un ritmo de sonidos urbanos. Y la segunda
+                            parte es
+                            impresionante, con una instrumental fuera de este mundo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canción 5 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">MOJABI GHOST by Tainy & Bad Bunny</h5>
+                        <p class="card-text">
+                            Probablemente mi canción favorita del álbum. Tainy brilla una vez más y nos lleva a un beat
+                            synthpop,
+                            algo melancólico. Es impresionante la capacidad de Bad Bunny para adaptarse a diferentes
+                            estilos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canción 6 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">11 Y ONCE by Tainy, Sech & E.Vax</h5>
+                        <p class="card-text">
+                            Una canción increíble sonoramente, con guitarras que sorprenden en un reguetón, pero que
+                            encajan
+                            perfectamente. La letra es impresionante, y la voz de Sech complementa de maravilla. Ese
+                            sample al final
+                            de Don Omar es simplemente hermoso.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canción 7  -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">desde las 10 (KANY’S INTERLUDE) by Tainy & Kany García</h5>
+                        <p class="card-text">
+                            Un interlude con la increíble voz de Kany García. La instrumental es minimalista, pero
+                            perfectamente ejecutada. Lo más impresionante es que sea una respuesta directa a la
+                            canción anterior.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Canción 8  -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">mañana by Tainy, Young Miko & The Marías</h5>
+                        <p class="card-text">
+                            Tainy es la única persona en el género capaz de fusionar a The Marías y Young Miko.
+                            Aunque no sea de mis favoritas, la ambientación de la canción es increíble. Es una
+                            canción muy relajada.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canción 9 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">BUENOS AIRES by Tainy, Mora & Zion</h5>
+                        <p class="card-text">
+                            No es de mis favoritas, pero los versos de Mora y la característica voz de Zion son
+                            destacables. Aunque no sea muy rica musicalmente, mantiene perfectamente la estructura y
+                            ambientación del álbum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canción 10  -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">COLMILLO by Tainy, J Balvin & Young Miko (Ft. Jowell & Randy)</h5>
+                        <p class="card-text">
+                            Sin duda, una de las canciones más controversiales del álbum, no solo por su producción
+                            que fusiona música disco y reguetón, sino también por sus detalles algo explícitos. A
+                            pesar de eso, la canción es excelente musicalmente. Las partes de Jowell y Randy son de
+                            las mejores sorpresas de todo el álbum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canción 11  -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">LA BABY by Tainy, Daddy Yankee & Feid (Ft. Sech)</h5>
+                        <p class="card-text">
+                            Me emocionó ver a Feid en este álbum, no lo esperaba. La vuelta de Daddy Yankee del
+                            retiro para este álbum histórico, y Sech aportando su toque. Aunque no sea tan aclamada
+                            por los fans, me gusta mucho la canción, desde su composición hasta los arreglos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canción 12  -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">me jodí... by Tainy & Arcángel</h5>
+                        <p class="card-text">
+                            No podía faltar la canción con uno de los mejores, Arcángel. Es increíble cómo se
+                            desenvuelve tan bien en una instrumental fuera de lo común para él, manteniendo su
+                            estilo característico. Los violines al final, anticipando la siguiente canción, son
+                            pequeños detalles, pero increíbles.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canción 13  -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">VOLVER by Tainy, Skrillex & Four Tet (Ft. Rauw Alejandro)</h5>
+                        <p class="card-text">
+                            Mi segunda canción favorita. El sample de Four Tet es increíble, la transición al
+                            reguetón, la letra, la instrumental, todo está perfecto. Tainy lo hace genial. Y el
+                            detalle de dubstep al final con Skrillex, algo inesperado, pero queda muy bien.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canción 14  -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">EN VISTO by Tainy & Ozuna</h5>
+                        <p class="card-text">
+                            La sensación que causó esta canción en su tiempo fue inexplicable. Recuerda al Ozuna de
+                            años anteriores, su voz increíble, y la instrumental tiene un toque muy japonés. La
+                            outro, simplemente una de las mejores que he escuchado en una canción de reguetón.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canción 15  -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Lo Siento BB:/ by Tainy, Bad Bunny & Julieta Venegas</h5>
+                        <p class="card-text">
+                            La canción que lo comenzó todo, el proyecto basado en ella. El junte de Julieta Venegas
+                            y Bad Bunny, algo inesperado pero una de las canciones más mágicas del álbum. La letra
+                            es excelente, y la instrumental ya se ha vuelto característica.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canción 16  -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">si preguntas por mí by Tainy, Kris Floyd & Judeline</h5>
+                        <p class="card-text">
+                            No conocía a los artistas, pero recuerdo perfectamente la primera vez que escuché esta
+                            canción. Para mí, la mejor instrumental de reguetón. Es increíble cómo suena tan bien, y
+                            esa parte final de Judeline te eleva.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canción 17  -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Sci-Fi by Tainy & Rauw Alejandro</h5>
+                        <p class="card-text">
+                            La transición es sublime. Una canción fiestera, pero poco prevista. La instrumental es
+                            algo nunca antes escuchado, y la voz de Rauw, junto con la ambientación, un 10/10.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canción 18  -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">CORLEONE INTERLUDE by Tainy & Chencho Corleone</h5>
+                        <p class="card-text">
+                            Interludio corto pero potente. La voz de Chencho, la instrumental melancólica, la letra,
+                            todo increíble. Es mi interludio favorito y se nota mucho la influencia japonesa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canción 19  -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">PARANORMAL by Tainy & Álvaro Díaz</h5>
+                        <p class="card-text">
+                            Esta canción se describe con una palabra: ¡INCREÍBLE! Una instrumental synthpop, pero más
+                            pesada. La
+                            ambientación es perfecta para escuchar de noche y lo que transmite es único. Sin duda, mi
+                            tercera
+                            favorita del álbum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Canción 20  -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">SACRIFICIO by Tainy & Xantos</h5>
+                        <p class="card-text">
+                            Canción extremadamente sentimental y personal para Tainy. Aunque solo sea un piano de
+                            fondo, transmite mucho. Te puedes identificar con la letra, que refleja la historia de
+                            Tainy en la industria del género y todo lo que tuvo que atravesar. Un cierre perfecto
+                            para su obra magna.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
     </section>
 
-    <hr>
+    <!-- Sección de Usuarios Registrados -->
+    <section id="usuarios" class="container my-5">
+        <h2 class="mb-4 text-center">Usuarios Fans Registrados</h2> <!-- Titulo de la sección -->
 
-    <!-- Sección sobre el analisis de las canciones -->
-    <section id="canciones">
-        <h2>Análisis de Canciones</h2>
-
-        <!-- Artículo para la canción -->
-        <article>
-            <h3>obstáculo by Tainy & Myke Towers</h3>
-            <p>
-                Es una canción intro con sonidos alternativos que refuerzan la influencia japonesa. Myke Towers relata
-                su camino en la música, una letra que también refleja la historia de Tainy.
-            </p>
-        </article>
-
-        <!-- Artículo para la canción -->
-        <article>
-            <h3>PASIEMPRE by Tainy, Arcángel & JHAYCO (Ft. Arca, Bad Bunny, Myke Towers & Omar Courtz)</h3>
-            <p>
-                Una canción de trap con una de las colaboraciones más grandes de la música actual. Todos los artistas se
-                complementan perfectamente, y aunque la instrumental es trap, suena muy fresca. La parte final de Bad
-                Bunny es impresionante.
-            </p>
-        </article>
-
-        <!-- Artículo para la canción  -->
-        <article>
-            <h3>Todavía by Tainy & Wisin & Yandel</h3>
-            <p>
-                La canción que reunió a Wisin y Yandel nuevamente. Un reguetón que recuerda al estilo clásico, pero con
-                ritmos futuristas y modernos. No decepciona el tan esperado regreso después de tantos años.
-            </p>
-        </article>
-
-        <!-- Artículo para la canción -->
-        <article>
-            <h3>FANTASMA | AVC by Tainy & JHAYCO</h3>
-            <p>
-                Una de mis canciones favoritas. Tainy y Jhayco tienen una química increíble. La primera parte te lleva a
-                un viaje futurista, perfecta para las noches, con un ritmo de sonidos urbanos. Y la segunda parte es
-                impresionante, con una instrumental fuera de este mundo.
-            </p>
-        </article>
-
-        <!-- Artículo para la canción -->
-        <article>
-            <h3>MOJABI GHOST by Tainy & Bad Bunny</h3>
-            <p>
-                Probablemente mi canción favorita del álbum. Tainy brilla una vez más y nos lleva a un beat synthpop,
-                algo melancólico. Es impresionante la capacidad de Bad Bunny para adaptarse a diferentes estilos.
-            </p>
-        </article>
-
-        <!-- Artículo para la canción -->
-        <article>
-            <h3>11 Y ONCE by Tainy, Sech & E.Vax</h3>
-            <p>
-                Una canción increíble sonoramente, con guitarras que sorprenden en un reguetón, pero que encajan
-                perfectamente. La letra es impresionante, y la voz de Sech complementa de maravilla. Ese sample al final
-                de Don Omar es simplemente hermoso.
-            </p>
-        </article>
-
-        <!-- Artículo para el interludio  -->
-        <article>
-            <h3>desde las 10 (KANY’S INTERLUDE) by Tainy & Kany García</h3>
-            <p>
-                Un interlude con la increíble voz de Kany García. La instrumental es minimalista, pero perfectamente
-                ejecutada. Lo más impresionante es que sea una respuesta directa a la canción anterior.
-            </p>
-        </article>
-
-        <!-- Artículo para la canción  -->
-        <article>
-            <h3>mañana by Tainy, Young Miko & The Marías</h3>
-            <p>
-                Tainy es la única persona en el género capaz de fusionar a The Marías y Young Miko. Aunque no sea de mis
-                favoritas, la ambientación de la canción es increíble. Es una canción muy relajada.
-            </p>
-        </article>
-
-        <!-- Artículo para la canción  -->
-        <article>
-            <h3>BUENOS AIRES by Tainy, Mora & Zion</h3>
-            <p>
-                No es de mis favoritas, pero los versos de Mora y la característica voz de Zion son destacables. Aunque
-                no sea muy rica musicalmente, mantiene perfectamente la estructura y ambientación del álbum.
-            </p>
-        </article>
-
-        <!-- Artículo para la canción  -->
-        <article>
-            <h3>COLMILLO by Tainy, J Balvin & Young Miko (Ft. Jowell & Randy)</h3>
-            <p>
-                Sin duda, una de las canciones más controversiales del álbum, no solo por su producción que fusiona
-                música disco y reguetón, sino también por sus detalles algo explícitos. A pesar de eso, la canción es
-                excelente musicalmente. Las partes de Yowell y Randy son de las mejores sorpresas de todo el álbum.
-            </p>
-        </article>
-
-        <!-- Artículo para la canción  -->
-        <article>
-            <h3>LA BABY by Tainy, Daddy Yankee & Feid (Ft. Sech)</h3>
-            <p>
-                Me emocionó ver a Feid en este álbum, no lo esperaba. La vuelta de Daddy Yankee del retiro para este
-                álbum histórico, y Sech aportando su toque. Aunque no sea tan aclamada por los fans, me gusta mucho la
-                canción, desde su composición hasta los arreglos.
-            </p>
-        </article>
-
-        <!-- Artículo para la canción -->
-        <article>
-            <h3>me jodí... by Tainy & Arcángel</h3>
-            <p>
-                No podía faltar la canción con uno de los mejores, Arcángel. Es increíble cómo se desenvuelve tan bien
-                en una instrumental fuera de lo común para él, manteniendo su estilo característico. Los violines al
-                final, anticipando la siguiente canción, son pequeños detalles, pero increíbles.
-            </p>
-        </article>
-
-        <!-- Artículo para la canción  -->
-        <article>
-            <h3>VOLVER by Tainy, Skrillex & Four Tet (Ft. Rauw Alejandro)</h3>
-            <p>
-                Mi segunda canción favorita. El sample de Four Tet es increíble, la transición al reguetón, la letra, la
-                instrumental, todo está perfecto. Tainy lo hace genial. Y el detalle de dubstep al final con Skrillex,
-                algo inesperado, pero queda muy bien.
-            </p>
-        </article>
-
-        <!-- Artículo para la canción -->
-        <article>
-            <h3>EN VISTO by Tainy & Ozuna</h3>
-            <p>
-                La sensación que causó esta canción en su tiempo fue inexplicable. Recuerda al Ozuna de años anteriores,
-                su voz increíble, y la instrumental tiene un toque muy japonés. La outro, simplemente una de las mejores
-                que he escuchado en una canción de reguetón.
-            </p>
-        </article>
-
-        <!-- Artículo para la canción  -->
-        <article>
-            <h3>Lo Siento BB:/ by Tainy, Bad Bunny & Julieta Venegas</h3>
-            <p>
-                La canción que lo comenzó todo, el proyecto basado en ella. El junte de Julieta Venegas y Bad Bunny,
-                algo inesperado pero una de las canciones más mágicas del álbum. La letra es excelente, y la
-                instrumental ya se ha vuelto característica.
-            </p>
-        </article>
-
-        <!-- Artículo para la canción  -->
-        <article>
-            <h3>si preguntas por mí by Tainy, Kris Floyd & Judeline</h3>
-            <p>
-                No conocía a los artistas, pero recuerdo perfectamente la primera vez que escuché esta canción. Para mí,
-                la mejor instrumental de reguetón. Es increíble cómo suena tan bien, y esa parte final de Judeline te
-                eleva.
-            </p>
-        </article>
-
-        <!-- Artículo para la canción  -->
-        <article>
-            <h3>Sci-Fi by Tainy & Rauw Alejandro</h3>
-            <p>
-                La transición es sublime. Una canción fiestera, pero poco prevista. La instrumental es algo nunca antes
-                escuchado, y la voz de Rauw, junto con la ambientación, un 10/10.
-            </p>
-        </article>
-
-        <!-- Artículo para el interludio  -->
-        <article>
-            <h3>CORLEONE INTERLUDE by Tainy & Chencho Corleone</h3>
-            <p>
-                Interludio corto pero potente. La voz de Chencho, la instrumental melancólica, la letra, todo increíble.
-                Es mi interludio favorito y se nota mucho la influencia japonesa.
-            </p>
-        </article>
-
-        <!-- Artículo para la canción  -->
-        <article>
-            <h3>PARANORMAL by Tainy & Álvaro Díaz</h3>
-            <p>
-                Esta canción se describe con una palabra: ¡INCREÍBLE! Una instrumental synthpop, pero más pesada. La
-                ambientación es perfecta para escuchar de noche y lo que transmite es único. Sin duda, mi tercera
-                favorita del álbum.
-            </p>
-        </article>
-
-        <!-- Artículo para la canción  -->
-        <article>
-            <h3>SACRIFICIO by Tainy & Xantos</h3>
-            <p>
-                Canción extremadamente sentimental y personal para Tainy. Aunque solo sea un piano de fondo, transmite
-                mucho. Te puedes identificar con la letra, que refleja la historia de Tainy en la industria del género y
-                todo lo que tuvo que atravesar. Un cierre perfecto para su obra magna.
-            </p>
-        </article>
-
+        <div class="table-responsive"> <!-- Hace que la tabla sea adaptable en pantallas pequeñas -->
+            <table class="table table-striped table-hover">
+                <!-- Tabla con filas a rayas y resaltado al pasar el mouse -->
+                <thead class="table-dark"> <!-- Encabezado de la tabla con fondo oscuro -->
+                    <tr>
+                        <th>ID de usuario</th> <!-- Columna para el identificador de usuario -->
+                        <th>Nombre completo</th> <!-- Columna para el nombre del usuario -->
+                        <th>Rol</th> <!-- Columna para el rol dentro del sistema -->
+                        <th>Acciones</th> <!-- Columna para acciones como ver, editar o eliminar -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Usuario 1 -->
+                    <tr>
+                        <td>001</td> <!-- ID del usuario -->
+                        <td>María Rodríguez</td> <!-- Nombre del usuario -->
+                        <td>Administrador</td> <!-- Rol del usuario -->
+                        <td>
+                            <div class="btn-group" role="group"> <!-- Grupo de botones de acción -->
+                                <button type="button" class="btn btn-info btn-sm">Ver</button> <!-- Botón para ver -->
+                                <button type="button" class="btn btn-warning btn-sm">Editar</button>
+                                <!-- Botón para editar -->
+                                <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
+                                <!-- Botón para eliminar -->
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Usuario 2 -->
+                    <tr>
+                        <td>002</td>
+                        <td>Juan Carlos Pérez</td>
+                        <td>Moderador</td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-info btn-sm">Ver</button>
+                                <button type="button" class="btn btn-warning btn-sm">Editar</button>
+                                <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Usuario 3 -->
+                    <tr>
+                        <td>003</td>
+                        <td>Ana María López</td>
+                        <td>Editor</td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-info btn-sm">Ver</button>
+                                <button type="button" class="btn btn-warning btn-sm">Editar</button>
+                                <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Usuario 4 -->
+                    <tr>
+                        <td>004</td>
+                        <td>Carlos Sánchez</td>
+                        <td>Usuario</td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-info btn-sm">Ver</button>
+                                <button type="button" class="btn btn-warning btn-sm">Editar</button>
+                                <button type="button" class="btn btn-danger btn-sm">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
 
-    <hr>
 
-    <!-- Sección sobre el impacto cultural del álbum -->
-    <section id="impacto">
-        <h2>Impacto Cultural</h2> <!-- Título de la sección sobre el impacto cultural -->
-        <p>
-            "DATA" no es solo un álbum, es una declaración de la evolución del reguetón y la música urbana. Tainy
-            demuestra una vez más por qué es uno de los productores más influyentes de la industria, fusionando géneros,
-            explorando sonidos futuristas y reuniendo a algunos de los mejores artistas del momento. Desde temas
-            melancólicos hasta canciones explosivas de reguetón y trap, este disco es una experiencia auditiva única que
-            refleja la visión artística de Tainy.
-            <br>
-            Sin duda, "DATA" es un álbum que marcará un antes y un después en la música urbana, dejando un legado de
-            innovación y creatividad.
-        </p>
-        <!-- Video relacionado al impacto cultural del álbum -->
-        <video width="300" controls>
-            <source src="Videos/Tainy artwork.mp4" type="video/mp4"> <!-- Fuente del video -->
-        </video>
+    <!-- Sección de impacto cultural con componentes de Bootstrap -->
+    <section id="impacto" class="container my-5"> <!-- Contenedor principal con margen superior e inferior -->
+        <div class="card"> <!-- Tarjeta de Bootstrap para organizar la información -->
+            <div class="card-header"> <!-- Encabezado de la tarjeta -->
+                <h2 class="mb-0">Impacto Cultural</h2> <!-- Título de la sección -->
+            </div>
+            <div class="card-body"> <!-- Cuerpo de la tarjeta -->
+                <p class="card-text">
+                    "DATA" no es solo un álbum, es una declaración de la evolución del reguetón y la música urbana.
+                    Tainy demuestra una vez más por qué es uno de los productores más influyentes de la industria,
+                    fusionando géneros, explorando sonidos futuristas y reuniendo a algunos de los mejores artistas del
+                    momento.
+                    Desde temas melancólicos hasta canciones explosivas de reguetón y trap, este disco es una
+                    experiencia auditiva
+                    única que refleja la visión artística de Tainy.
+                    <br>
+                    Sin duda, "DATA" es un álbum que marcará un antes y un después en la música urbana, dejando un
+                    legado de innovación y creatividad.
+                </p>
+
+                <!-- Contenedor para video responsivo usando Bootstrap -->
+                <div class="ratio ratio-16x9 mt-4"> <!-- Mantiene la proporción 16:9 en distintos dispositivos -->
+                    <video controls> <!-- Elemento de video con controles de reproducción -->
+                        <source src="Videos/Tainy artwork.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Sección de footer con información adicional -->
-    <footer>
-        <p><strong>Fuentes:</strong> Información obtenida de Genius y Data.archives en Instagram.</p>
-        <p><strong>Contacto:</strong>
-            <a href="mailto:bryandavid.yepes@uniautonoma.edu.com">bryandavid.yepes@uniautonoma.edu.com
-            </a>
-        </p>
 
-    </footer>
-
-
-</body>
-
-</html>
+<!-- Footer con Bootstrap -->
+<footer id="contacto" class="bg-dark text-white py-4 border-top">
+    <div class="container">
+        <div class="row">
+            <!-- Sección de fuentes -->
+            <div class="col-md-6">
+                <h5>Fuentes</h5>
+                <p>Información obtenida de <a href="https://genius.com" target="_blank" class="text-white">Genius</a> y <a href="https://www.instagram.com/data.archives/" target="_blank" class="text-white">Data.archives</a> en Instagram.</p>
+            </div>
+            
+            <!-- Sección de contacto -->
+            <div class="col-md-6">
+                <h5>Contacto</h5>
+                <p>
+                    <a href="mailto:bryan.yepes.o@uniautonoma.edu.co" class="text-white" aria-label="Enviar correo a Bryan">
+                        bryan.yepes.o@uniautonoma.edu.co
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
