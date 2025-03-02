@@ -1,134 +1,116 @@
-/* Importar la fuente Montserrat */
-
+/* Importamos la fuente Montserrat desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 
-/* Estilos del body */
+/* Estilos generales del body */
 body {
-    font-family: 'Montserrat', sans-serif; /* Se establece la fuente Montserrat */
-    margin: 0; /* Elimina los márgenes predeterminados */
-    padding: 0; /* Elimina los rellenos predeterminados */
-    background-color: #111619; /* Fondo oscuro para la pagina */
-    color: #dec8b2; /* Color del texto */
-    line-height: 1.6; /* Altura de línea para */
+    font-family: 'Montserrat', sans-serif; /* Aplica la fuente Montserrat */
+    background-color: #111619;
+    color: #dec8b2;
 }
 
 /* Estilos para el encabezado */
 header {
-    text-align: center; /* Centra el texto dentro del encabezado */
-    padding: 25px; /* Agrega espacio interno al encabezado */
-    background: #1d232d; /* Color de fondo del encabezado */
+    background: #1d232d;
+    padding: 2rem 0; /* Espaciado interno superior e inferior */
 }
 
 header h1 {
-    font-size: 2.5em; /* Tamaño del título principal */
-    font-weight: 600; /* Tamaño de la fuente */
-    margin-bottom: 10px; /* Espacio debajo del titulo */
-    color: #b68582; /* Color del titulo */
+    color: #b68582;
+    font-weight: 600; /* Texto en negrita */
 }
 
 header p {
-    font-size: 1.2em; /* Tamaño del parrafo */
-    max-width: 700px; /* Limita el ancho del texto */
-    margin: auto; /* Centra el texto */
-    color: #94988b; /* Color del texto */
+    color: #94988b;
 }
 
-/* Estilos para la navegación */
-nav ul {
-    list-style: none; /* Elimina los estilos de lista */
-    padding: 0; /* Elimina el relleno */
-    text-align: center; /* Centra los elementos de la lista */
-}
-
-nav ul li {
-    display: inline; /* Muestra los elementos en una especie linea */
-    margin: 0 15px; /* Espaciado entre elementos */
-}
-
-nav ul li a {
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: #dec8b2; /* Color del enlace */
-    font-weight: 400; /* Grosor del texto */
-    transition: color 0.3s ease; /* Suaviza el cambio de color */
-}
-
-nav ul li a:hover {
-    color: #5e838e; /* Cambia de color al pasar el mouse */
-}
-
-/* Estilos para las secciones */
-section {
-    max-width: 800px; /* Ancho maximo de la seccion */
-    margin: 40px auto; /* Centra la seccióo y ademas le da margen */
-    padding: 25px; /* Espaciado interno */
-    background: #2a313e; /* Color de fondo de la sección */
+/* Estilos para las tarjetas (Bootstrap Cards) */
+.card {
+    background: #2a313e;
+    border: none; /* Elimina el borde predeterminado */
     border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 0 15px rgba(94, 131, 142, 0.2); /* Sombra suave */
+    box-shadow: 0 0 15px rgba(94, 131, 142, 0.2); /* Sombra ligera */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transición suave */
+    color: #999999;
 }
 
-/*  Estilos para los articulos dentro de la sección de canciones */
-#canciones article {
-    background: #2f2a2a; /* Color de fondo de los articulos */
-    padding: 20px; /* Espaciado interno */
-    margin: 20px 0; /* Margen entre articulos */
-    border-radius: 8px; /* Bordes redondeados */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones suaves */
+/* Efecto de hover en las tarjetas */
+.card:hover {
+    transform: scale(1.02); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 0 20px rgba(182, 133, 130, 0.4); /* Aumenta la sombra */
 }
 
-/* Efecto de zoom al pasar el mouse sobre los artículos  */
-#canciones article:hover {
-    transform: scale(1.05); /* Aumenta el tamaño */
-    box-shadow: 0 0 20px rgba(182, 133, 130, 0.4); /* Agrega sombra */
+/* Encabezado de la tarjeta */
+.card-header {
+    background-color: #2f2a2a;
+    border-bottom: 2px solid #b68582; /* Línea decorativa en el borde inferior */
 }
 
-/*  Estilos para los títulos */
+/* Estilo para los títulos dentro de las tarjetas */
+.card-title {
+    color: #b68582;
+}
+
+/* Estilos generales para los títulos de nivel 2 */
 h2 {
-    color: #ad4e64; /* Color del titulo de la sección */
-    border-bottom: 2px solid #b68582; /* Linea inferior decorativa */
-    padding-bottom: 5px; /* Espaciado debajo del título */
+    color: #ad4e64;
 }
 
-h3 {
-    color: #b68582; /*Color de los subtitulos*/
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: #1d232d !important;
 }
 
-/* Estilos para las imágenes */
-img {
-    display: block; /* Hace que la imagen sea un bloque */
-    max-width: 100%; /* Evita que la imagen se desborde */
-    height: auto; /* Mantiene la proporción */
-    margin: 20px auto; /* Centra la imagen */
+/* Estilos para los enlaces de navegación */
+.nav-link {
+    color: #dec8b2 !important;
+    transition: color 0.3s ease; /* Transición suave de color */
+}
+
+/* Cambio de color al pasar el mouse por los enlaces de navegación */
+.nav-link:hover {
+    color: #5e838e !important;
+}
+
+/* Estilos para los encabezados de la tabla */
+.table th {
+    color: #b68582;
+}
+
+/* Estilos para la barra de progreso */
+.progress {
+    background-color: #2f2a2a;
+}
+
+/* Color de la barra de progreso */
+.progress-bar {
+    background-color: #ad4e64;
+}
+
+/* Estilos para el carrusel */
+.carousel-caption {
+    background-color: rgba(29, 35, 45, 0.7); /* Fondo semitransparente para mejorar legibilidad */
+}
+
+/* Estilos para las imágenes dentro del carrusel */
+.carousel-item img {
     border-radius: 8px; /* Bordes redondeados */
+    max-height: 500px; /* Altura máxima de las imágenes */
+    object-fit: cover; /* Ajuste para que las imágenes cubran bien el espacio */
 }
 
-/* Estilos para los enlaces */
-a {
-    color: #5e838e; /* Color de los enlaces */
-    transition: color 0.3s ease; /* Suaviza el cambio de color */
+/* Estilos para el pie de página */
+footer {
+    background-color: #1d232d !important;
 }
 
-a:hover {
-    color: #ad4e64; /* Color del enlace al pasar el mouse */
+/* Estilos para los enlaces en el footer */
+footer a {
+    color: #5e838e !important;
+    transition: color 0.3s ease; /* Transición de color suave */
 }
 
-
-/*  Estilos responsivos */
-@media (max-width: 768px) {
-    section {
-        margin: 20px; /* Reduce el margen en pantallas pequeñas */
-        padding: 15px; /* Reduce el padding */
-    }
-
-    header h1 {
-        font-size: 2em; /* Reduce el tamaño del título */
-    }
-
-    header p {
-        font-size: 1em; /* Reduce el tamaño del texto */
-    }
-
-    .video-container iframe {
-        width: 95%; /* Asegura que el video ocupe más espacio en móviles */
-        height: 300px; /* Reduce la altura */
-    }
+/* Cambio de color al pasar el mouse sobre los enlaces del footer */
+footer a:hover {
+    color: #ad4e64 !important;
+    text-decoration: none; /* Elimina el subrayado */
 }
